@@ -166,10 +166,12 @@ html body header .menu-2 .menu-2_icon:hover .menu-2_list {
   transform: translateX(200px);
 }
 html body header .menu-2_list {
+  width: 100%;
+  position: absolute;
+  top: 0;
   background: #FFFFFF;
   padding: 1px;
   opacity: 0;
-  display: none;
   -webkit-transform: translateY(-290px);
   -moz-transform: translateY(-290px);
   -ms-transform: translateY(-290px);
@@ -510,8 +512,6 @@ html body .pro-skills .skill-bottom .mess-bottom .my-resume li:nth-child(odd) {
   padding-left: 20%;
 }
 html body .project {
-  background: url(../img/7065230ad9fe0e846f902db49278f057.jpg) no-repeat left top;
-  background-size: 100% 100%;
   position: relative;
 }
 html body .project .project-mask {
