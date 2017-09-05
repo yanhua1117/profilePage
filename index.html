@@ -9,13 +9,24 @@
                     minimum-scale = 1.0,
                     maximum-scale = 1.0,
                     user-scalable = no"/>
-		<meta name="name" content="yanhua">
 		<title>YANHUA's HOME</title>
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/move.js"></script>
 	</head>
 	<body>
+		<div id="load_box">
+			<div class="load_before" id="load_before">
+				<div class="xie_line">
+					<div class="center_circle">
+						<div class="c_c_topc"></div>
+					</div>
+				</div>
+				<div id="hd_left"></div>
+				<div id="hd_right"></div>
+			</div>
+		</div>
 		<!--<canvas id="fadeOpen"></canvas>-->
 		<header>
 			<div class="menu-1">
@@ -24,9 +35,9 @@
 				<!--<span class="resume nav-left">个人简历</span>-->
 				<!--<span class="resume nav-left">博客</span>-->
 				<ul class="nav-right">
-					<li><a href="#person" id="a1">个人介绍</a></li>
-					<li><a href="#about_me">关于我</a></li>
-					<li><a href="#project_experience">项目经验</a></li>
+					<li><a href="javascript:;" class="link_item" data-id="person">个人介绍</a></li>
+					<li><a href="javascript:;" class="link_item" data-id="about_me">关于我</a></li>
+					<li><a href="javascript:;" class="link_item" data-id="project_experience">项目经验</a></li>
 				</ul>
 			</div>
 			<div class="menu-2">
@@ -35,18 +46,16 @@
 					<h3>HOME</h3>
 				</div>
 				<div class="menu-2_icon">
-					<span class="menu-icon1"></span>
-					<span class="menu-icon2"></span>
-					<span class="menu-icon3"></span>
+					<span class="menu-icon1 menu-icon"></span>
+					<span class="menu-icon2 menu-icon"></span>
+					<span class="menu-icon3 menu-icon"></span>
 				</div>
 			</div>
 			<div class="menu-2_list">
 				<ul id="menu-item">
-					<a href="#person"><li><span class="fa fa-home"></span>HOME</li></a>
-					<a href=""><li><span class="fa fa-file-o"></span>个人介绍</li></a>
-					<!--<a href=""><li><span class="fa fa-comments-o"></span>博客</li></a>-->
-					<a href="#about_me"><li><span class="fa fa-user"></span>关于我</li></a>
-					<a href="#project_experience"><li><span class="fa fa-keyboard-o"></span>项目经验</li></a>
+					<li><a href="javascript:;" class="link_item" data-id="person"><span class="fa fa-file-o"></span>个人介绍</a></li>
+					<li><a href="javascript:;" class="link_item" data-id="about_me"><span class="fa fa-user"></span>关于我</a></li>
+					<li><a href="javascript:;" class="link_item" data-id="project_experience"><span class="fa fa-keyboard-o"></span>项目经验</a></li>
 			</div>
 		</header>
 		<!--<a href="#" class="menu-icon">

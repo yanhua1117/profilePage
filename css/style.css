@@ -31,7 +31,7 @@ html body header {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 899;
   /*宽度大于640px时显示的导航样式*/
   /*宽度小于640px时导航显示样式*/
 }
@@ -90,6 +90,7 @@ html body header .menu-2 {
   height: 20px;
   position: relative;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  z-index: 999;
 }
 html body header .menu-2 .menu-2_title {
   width: 100px;
@@ -110,11 +111,12 @@ html body header .menu-2 .menu-2_icon {
   top: 30%;
   cursor: pointer;
 }
-html body header .menu-2 .menu-2_icon span {
+html body header .menu-2 .menu-2_icon .menu-icon {
   margin: 4px;
   display: block;
   width: 22px;
   height: 4px;
+  opacity: 1;
   background: #000000;
   border-radius: 5px;
   -webkit-transition: 0.2s;
@@ -123,7 +125,7 @@ html body header .menu-2 .menu-2_icon span {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-html body header .menu-2 .menu-2_icon:hover .menu-icon1 {
+html body header .menu-2 .menu-icon1-active {
   -webkit-transform-origin: right center;
   -moz-transform-origin: right center;
   -ms-transform-origin: right center;
@@ -135,7 +137,7 @@ html body header .menu-2 .menu-2_icon:hover .menu-icon1 {
   -o-transform: rotate(-46deg);
   transform: rotate(-46deg);
 }
-html body header .menu-2 .menu-2_icon:hover .menu-icon3 {
+html body header .menu-2 .menu-icon3-active {
   -webkit-transform-origin: right center;
   -moz-transform-origin: right center;
   -ms-transform-origin: right center;
@@ -147,13 +149,13 @@ html body header .menu-2 .menu-2_icon:hover .menu-icon3 {
   -o-transform: rotate(46deg);
   transform: rotate(46deg);
 }
-html body header .menu-2 .menu-2_icon:hover .menu-icon2 {
+html body header .menu-2 .menu-icon2-active {
   -webkit-transform: translateX(10px);
   -moz-transform: translateX(10px);
   -ms-transform: translateX(10px);
   -o-transform: translateX(10px);
   transform: translateX(10px);
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0) !important;
 }
 html body header .menu-2 .menu-2_icon:hover .menu-2_list {
   -webkit-transform: translateX(200px);
@@ -165,7 +167,12 @@ html body header .menu-2 .menu-2_icon:hover .menu-2_list {
 html body header .menu-2_list {
   background: #FFFFFF;
   padding: 1px;
-  display: none;
+  opacity: 0;
+  -webkit-transform: translateY(-290px);
+  -moz-transform: translateY(-290px);
+  -ms-transform: translateY(-290px);
+  -o-transform: translateY(-290px);
+  transform: translateY(-290px);
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
@@ -185,6 +192,14 @@ html body header .menu-2_list ul li {
 html body header .menu-2_list ul li span {
   margin: 0 10px;
   font-size: 18px;
+}
+html body header .menu-active {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
 }
 html body .personal {
   height: 100%;
@@ -211,11 +226,11 @@ html body .personal .contact {
   -ms-transform: translateX(100%);
   -o-transform: translateX(100%);
   transform: translateX(100%);
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 html body .personal .contact #close-icon {
   display: inline-block;
@@ -508,6 +523,7 @@ html body .project .project-bottom .project-list .list-row {
   justify-content: center;
   flex-flow: row wrap;
   margin-left: 50%;
+  padding-bottom: 50px;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -592,6 +608,64 @@ html body .project .project-bottom .project-list .list-row .list-item:hover img 
   -ms-transition: 1s ease-out;
   -o-transition: 1s ease-out;
   transition: 1s ease-out;
+}
+html body #load_box {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 949;
+}
+html body #load_box .load_before {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  opacity: 1;
+  z-index: 950;
+  background: white;
+}
+html body #load_box .load_before .xie_line {
+  height: 1px;
+  width: 110%;
+  background: #999;
+  position: absolute;
+  margin: 300px 0 0 -60px;
+  transform: rotate(-15deg);
+  z-index: 999;
+}
+html body #load_box .load_before .xie_line .center_circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  margin: -20px auto;
+  position: relative;
+  background: white;
+}
+html body #load_box .load_before .xie_line .center_circle .c_c_topc {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  border-radius: 4px;
+  background: #666;
+}
+html body #load_box .load_before #hd_left {
+  position: absolute;
+  height: 100%;
+  background: #fff;
+  left: 0;
+  z-index: 1000;
+}
+html body #load_box .load_before #hd_right {
+  position: absolute;
+  height: 100%;
+  background: #fff;
+  right: 0;
+  z-index: 1000;
 }
 #fadeOpen {
   width: 100%;
