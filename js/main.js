@@ -17,13 +17,12 @@ window.onload = function(){
 	var menuList = document.getElementsByClassName('menu-2_list')[0];
 	var onOff=true;
 	menuIcon.onclick = function(){
-			menuList.style.display = 'block';
 		if (onOff) {
+			menuList.style.top = 55+'px';
 			$('.menu-2_list').addClass('menu-active');
 			$('.menu-icon1').addClass('menu-icon1-active');
 			$('.menu-icon2').addClass('menu-icon2-active');
 			$('.menu-icon3').addClass('menu-icon3-active');
-
 			onOff = false;
 		} else{
 			$('.menu-2_list').removeClass('menu-active');
