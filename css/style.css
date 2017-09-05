@@ -209,11 +209,11 @@ html body .personal {
   overflow: hidden;
 }
 html body .personal * {
-  -webkit-transition: all 0.3;
-  -moz-transition: all 0.3;
-  -ms-transition: all 0.3;
-  -o-transition: all 0.3;
-  transition: all 0.3;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 html body .personal .contact {
   height: 100%;
