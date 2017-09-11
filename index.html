@@ -46,7 +46,9 @@
 			$('.slash').addClass('slash-active');
 			$('.load-page').animate({
 				opacity:'0'
-			},300);
+			},1000,function(){
+				$('.load-page').remove();
+			});
 		</script>
 		<header>
 			<div class="menu-1">
