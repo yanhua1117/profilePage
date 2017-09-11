@@ -6,6 +6,87 @@ html {
         height: 100%;
         position: relative;
         min-width: 360px;
+//      加载页面样式
+        .load-page{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #FFFFFF;
+            opacity: 1;
+            overflow: hidden;
+            z-index: 10000;
+            -webkit-transition: 0.5s 0.5s ease-in;
+            -moz-transition: 0.5s 0.5s ease-in;
+            -ms-transition: 0.5s 0.5s ease-in;
+            -o-transition: 0.5s 0.5s ease-in;
+            transition: 0.5s 0.5s ease-in;
+            .slash{
+                height:1px;
+                position: absolute;
+                top: 50%;
+                background: #999;
+                -webkit-transform: rotate(-15deg) scale(1);
+                -moz-transform: rotate(-15deg) scale(1);
+                -ms-transform: rotate(-15deg) scale(1);
+                -o-transform: rotate(-15deg) scale(1);
+                transform: rotate(-15deg) scale(1);
+                -webkit-transition: 0.27s cubic-bezier(0,0,0.2,0.8);
+                -moz-transition: 0.27s cubic-bezier(0,0,0.2,0.8);
+                -ms-transition: 0.27s cubic-bezier(0,0,0.2,0.8);
+                -o-transition: 0.27s cubic-bezier(0,0,0.2,0.8);
+                transition: 0.27s cubic-bezier(0,0,0.2,0.8);
+                -webkit-transition-delay: 0.25s;
+                -moz-transition-delay: 0.25s;
+                -ms-transition-delay: 0.25s;
+                -o-transition-delay: 0.25s;
+                transition-delay: 0.25s;
+                -webkit-transform-origin: center;
+                -moz-transform-origin: center;
+                -ms-transform-origin: center;
+                -o-transform-origin: center;
+                transform-origin: center;
+            }
+            .slash-active{
+                -webkit-transform: rotate(-15deg) scale(0);
+                -moz-transform:rotate(-15deg) scale(0);
+                -ms-transform:rotate(-15deg) scale(0);
+                -o-transform:rotate(-15deg) scale(0);
+                transform:rotate(-15deg) scale(0);
+            }
+            .big-circle{
+                position: relative;
+                width: 3%;
+                border: 1px solid rgba(0,0,0,0.6);
+                border-radius: 50%;
+                background: #FFFFFF;
+                -webkit-transform: scale(1.4);
+                -moz-transform: scale(1.4);
+                -ms-transform: scale(1.4);
+                -o-transform: scale(1.4);
+                transform: scale(1.4);
+                -webkit-transition: 0.25s 0.1s ease-out;
+                -moz-transition: 0.25s 0.1s ease-out;
+                -ms-transition: 0.25s 0.1s ease-out;
+                -o-transition: 0.25s 0.1s ease-out;
+                transition: 0.25s 0.1s ease-out;
+                .sm-circle{
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    background: rgba(0,0,0,0.8);
+                    border-radius: 50%;
+                }
+            }
+            .big-active{
+                    -webkit-transform: scale(0);
+                    -moz-transform: scale(0);
+                    -ms-transform: scale(0);
+                    -o-transform: scale(0);
+                    transform: scale(0);
+            }
+        }
         .page1-bg {
             width: 100%;
             height: 100%;
@@ -59,6 +140,9 @@ html {
                     vertical-align: top;
                     font-weight: bold;
                     cursor: pointer;
+                    a{
+                        color: #000000;
+                    }
                 }
                 .logo {
                     font-weight: bold;
@@ -644,77 +728,7 @@ html {
                 }
             }
         }
-    
-        //页面加载动画
-        #load_box{
-            height:100%;
-            width:100%;
-            position:fixed;
-            top:0;
-            left:0;
-            z-index:949;
-            .load_before{
-                height:100%;
-                width:100%;
-                position:relative;
-                overflow-x:hidden;
-                opacity:1;
-                z-index:950;
-                background:white;
-                .xie_line{
-                    height:1px;
-                    width:110%;
-                    background:#999;
-                    position:absolute;
-                    margin:300px 0 0 -60px;
-                    transform:rotate(-15deg);
-                    z-index: 999;
-                    .center_circle{
-                        height:40px;
-                        width:40px;
-                        border-radius:20px;
-                        border:1px solid #999;
-                        margin:-20px auto;
-                        position:relative;
-                        background:white;
-                        .c_c_topc{
-                            height:8px;
-                            width:8px;
-                            position:absolute;
-                            top:-4px;
-                            left:50%;
-                            border-radius:4px;
-                            background:#666;
-                        }
-                    }
-                }
-                #hd_left{
-                    position:absolute;
-                    height:100%;
-                    background:#fff;
-                    left:0;
-                    z-index:1000
-                }
-                #hd_right{
-                    position:absolute;
-                    height:100%;
-                    background:#fff;
-                    right:0;
-                    z-index:1000
-                }
-            }
-        }
     }
-}
-
-#fadeOpen {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 111;
 }
 
 @media screen and (max-width:800px){

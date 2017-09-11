@@ -13,21 +13,41 @@
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<script src="js/move.js"></script>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		<div id="load_box">
-			<div class="load_before" id="load_before">
-				<div class="xie_line">
-					<div class="center_circle">
-						<div class="c_c_topc"></div>
-					</div>
-				</div>
-				<div id="hd_left"></div>
-				<div id="hd_right"></div>
+		<div class="load-page">
+			<div class="slash"></div>
+			<div class="big-circle">
+				<div class="sm-circle"></div>
 			</div>
 		</div>
-		<!--<canvas id="fadeOpen"></canvas>-->
+		<script type="text/javascript">
+			var screenWidth = $(document).width();
+			var screenHeight = $(window).height();
+			var slashWidth = screenWidth/(Math.cos(20*Math.PI/180));
+			var bigWidth = $('.big-circle').width();
+			var smWidth = $('.sm-circle').width();
+			$('.slash').css({
+				'width':slashWidth,
+				'left':-(slashWidth-screenWidth)/2
+			});
+			$('.big-circle').css({
+				'height':bigWidth,
+				'left':(screenWidth/2)-(bigWidth/2),
+				'top':(screenHeight/2)-(bigWidth/2)
+			});
+			$('.sm-circle').css({
+				'top':-smWidth/2,
+				'left':(bigWidth/2)-(smWidth/2)
+			});
+			
+			$('.big-circle').addClass('big-active');
+			$('.slash').addClass('slash-active');
+			$('.load-page').animate({
+				opacity:'0'
+			},300);
+		</script>
 		<header>
 			<div class="menu-1">
 				<span class="fa fa-home nav-left" id="nav-icon"></span>
@@ -86,7 +106,7 @@
 						<!--<span id="sele-icon">></span>-->
 					</div>
 					<div class="pro-icon">
-						<a href="#" class="personal-icon"><span class="fa fa-github information"></span></a>
+						<a href="https://github.com/yanhua1117" target="_blank" class="personal-icon"><span class="fa fa-github information"></span></a>
 						<a href="#" class="personal-icon"><span class="fa fa-weixin information"></span></a>
 						<a href="#" class="personal-icon"><span class="fa fa-weibo information"></span></a>
 					</div>
@@ -209,7 +229,7 @@
 			</div>
 		</div>
 	</body>
-	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	
 	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	
 </html>
