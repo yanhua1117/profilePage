@@ -645,7 +645,8 @@ html body .project .project-bottom .project-list .list-row .list-item {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  width: 33.33%;
+  width: 30%;
+  border: 5px solid #FFFFFF;
 }
 html body .project .project-bottom .project-list .list-row .list-item .list-mask {
   width: 100%;
@@ -781,7 +782,7 @@ html body .project .project-bottom .project-list .list-row .list-item:hover img 
     width: 810px !important;
   }
   .list-row .list-item {
-    width: 50% !important;
+    width: 45% !important;
   }
 }
 @media screen and (max-width: 860px) {
